@@ -16,24 +16,33 @@ app.use('/api/getHomeDate', function(req, res) {
   res.json(
     Mock.mock({
       status: 200,
-      'dataSource|1-9': [
+      dataSource: [
         {
-          'key|+1': 1,
-          'mockTitle|1': ['肆无忌惮'],
-          'mockContent|1': [
-            '角色精湛主题略荒诞',
-            '理由太短 是让人不安',
-            '疑信参半 却无比期盼',
-            '你的惯犯 圆满',
-            '别让纠缠 显得 孤单',
-          ],
-          'mockAction|1': ['下载', '试听', '喜欢'],
+          key: '1',
+          name: 'John Brown',
+          age: 32,
+          address: 'New York No. 1 Lake Park',
+          tags: ['nice', 'developer'],
+        },
+        {
+          key: '2',
+          name: 'Jim Green',
+          age: 42,
+          address: 'London No. 1 Lake Park',
+          tags: ['loser'],
+        },
+        {
+          key: '3',
+          name: 'Joe Black',
+          age: 32,
+          address: 'Sidney No. 1 Lake Park',
+          tags: ['cool', 'teacher'],
         },
       ],
     }),
   );
 });
 
-app.listen('9002', () => {
-  console.log('开启Mock服务，监听端口9002');
+app.listen('4279', () => {
+  console.log('开启Mock服务，监听端口4279');
 });

@@ -1,8 +1,7 @@
 import React from 'react';
 import './Header.scss';
-import { Icon } from 'antd';
+import { Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
-// import Home from '../Home';
 
 class Header extends React.Component {
   constructor(props) {
@@ -13,23 +12,29 @@ class Header extends React.Component {
     this.props.changeMenuFoldState();
   }
   render() {
-    const isMenuFold = this.props.isMenuFold;
-    let foldIcon;
-    if (isMenuFold) {
-      foldIcon = <Icon type='menu-fold' />;
-    } else {
-      foldIcon = <Icon type='menu-unfold' />;
-    }
+    const RightContent = (
+      <Menu mode='horizontal'>
+        <Menu.Item>
+          <span className='home-btn'>
+            <Link to='/'>
+              <Icon type='home' />
+            </Link>
+          </span>
+        </Menu.Item>
+      </Menu>
+    );
     return (
       <div
         className={this.props.isMenuFold ? 'header-bar' : 'header-bar-close'}
       >
-        <span onClick={this.handleFoldIconClick}>{foldIcon}</span>
-        <span class='home-btn'>
-          <Link to='/'>
-            <Icon type='home' />
-          </Link>
+        <span onClick={this.handleFoldIconClick}>
+          {this.props.isMenuFold ? (
+            <Icon type='menu-fold' />
+          ) : (
+            <Icon type='menu-unfold' />
+          )}
         </span>
+        <div className='right-content'>{RightContent}</div>
       </div>
     );
   }

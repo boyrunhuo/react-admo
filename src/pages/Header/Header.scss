@@ -2,12 +2,11 @@
     position: fixed;
     top: 0;
     background-color: #fff;
-    height: 40px;
-    left: 140px;
+    height: 60px;
+    left: 256px;
     right: 0;
-    line-height: 40px;
+    line-height: 60px;
     box-shadow: 0 0 8px #000;
-    transition: all .1s;
 
 }
 
@@ -15,10 +14,10 @@
     position: fixed;
     top: 0;
     background-color: #fff;
-    height: 40px;
-    left: 40px;
+    height: 60px;
+    left: 80px;
     right: 0;
-    line-height: 40px;
+    line-height: 60px;
     box-shadow: 0 0 8px #000;
     transition: all .1s;
 
@@ -40,4 +39,8 @@
         cursor: pointer;
         font-size: 24px;
     }
+}
+
+.right-content {
+    float: right;
 }
