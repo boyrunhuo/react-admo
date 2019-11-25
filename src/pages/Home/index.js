@@ -71,7 +71,7 @@ class Home extends React.Component {
     return (
       <div>
         <p>首页</p>
-        <button onClick={this.getData}>获取数据</button>
+        <button onClick={this.getData}>加载数据</button>
         <Table columns={columns} dataSource={this.state.dataSource} />
       </div>
     );
