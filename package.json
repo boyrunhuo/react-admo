@@ -16,6 +16,7 @@
     "react-scripts": "3.0.1",
     "redux": "4.0.4"
   },
+  "homepage": "https://boyrunhuo.github.io/react-admo",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
