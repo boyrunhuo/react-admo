@@ -5,6 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './services'; //http拦截器设置
 import 'antd/dist/antd.css';
+import axios from 'axios';
+
+React.Component.prototype.$http = axios;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

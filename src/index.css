@@ -12,8 +12,3 @@ code {
     monospace;
 }
 
-#nprogress .bar {
-  background: #ffaa11 !important;
-  height: 3px !important;
-  top: 0 !important;
-}

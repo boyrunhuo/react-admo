@@ -1,21 +1,39 @@
 import React from 'react';
-import axios from 'axios';
-import { Table, Divider, Tag } from 'antd';
+import './index.scss'
+import { Table, Divider, Tag, Button, Icon, Modal } from 'antd';
+import AddData from './AddData'
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.getData = this.getData.bind(this);
-    this.getData();
     this.state = {
       dataSource: [],
+      visible: false
     };
   }
-
-  getData() {
-    axios.get('/api/getHomeDate').then(res => {
-      this.state.dataSource = res.data.dataSource;
+  componentWillMount() {
+    this.getData()
+  }
+  getData = () => {
+    this.$http.get('/api/getHomeDate').then(res => {
+      this.setState({ dataSource: res.data.dataSource })
     });
+  }
+  addData = () => {
+    console.log('addData')
+    this.setState({
+      visible:true
+    })
+  }
+  handleOk = (e) => {
+    this.setState({
+      visible: false,
+    })
+  }
+  handleCancel = e => {
+    this.setState({
+      visible: false,
+    })
   }
   render() {
     const columns = [
@@ -69,10 +87,18 @@ class Home extends React.Component {
     ];
 
     return (
-      <div>
+      <div id="home">
         <p>首页</p>
-        <button onClick={this.getData}>加载数据</button>
-        <Table columns={columns} dataSource={this.state.dataSource} />
+        <Button id="addDataBtn" type="primary" onClick={this.addData}>加载数据<Icon type="plus" /></Button>
+        <Table dataSource={this.state.dataSource} columns={columns} />
+        <Modal
+          title="添加数据"
+          visible={this.state.visible}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+        >
+          <AddData />
+        </Modal>
       </div>
     );
   }
