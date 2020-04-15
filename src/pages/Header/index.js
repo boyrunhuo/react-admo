@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.scss';
 import { Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
+import store from '../../redux/store'
 
 class Header extends React.Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class Header extends React.Component {
     this.handleFoldIconClick = this.handleFoldIconClick.bind(this);
   }
   handleFoldIconClick() {
-    this.props.changeMenuFoldState();
+    // console.log('store',store,store.dispatch)
+    store.dispatch({type: 'TOGGLE_SIDEBAR'})
   }
   render() {
     const RightContent = (

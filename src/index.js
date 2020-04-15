@@ -4,8 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './services'; //http拦截器设置
+import 'antd'
 import 'antd/dist/antd.css';
 import axios from 'axios';
+
 
 React.Component.prototype.$http = axios;
 

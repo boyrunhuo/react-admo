@@ -1,9 +1,10 @@
 import React from 'react';
 import Sidebar from './pages/SideBar';
 import Header from './pages/Header';
-import Content from './pages/Content';
 import './App.scss';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Switch, BrowserRouter as Router } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config'
+import routes from './router'
 
 
 class App extends React.Component {
@@ -28,7 +29,13 @@ class App extends React.Component {
             changeMenuFoldState={this.changeMenuFoldState}
             isMenuFold={this.state.isMenuFold}
           />
-          <Content isMenuFold={this.state.isMenuFold} />
+          <div className={
+            this.state.isMenuFold ? 'content-wrap' : 'content-wrap-close'
+          }>
+            <Switch>
+              {renderRoutes(routes)}
+            </Switch>
+          </div>
         </Router>
       </div>
     );
