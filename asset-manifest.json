@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-admo/static/css/main.81fa0e53.chunk.css",
+    "main.js": "/react-admo/static/js/main.b464d932.chunk.js",
+    "main.js.map": "/react-admo/static/js/main.b464d932.chunk.js.map",
+    "runtime~main.js": "/react-admo/static/js/runtime~main.02a48e77.js",
+    "runtime~main.js.map": "/react-admo/static/js/runtime~main.02a48e77.js.map",
+    "static/css/2.1d6907fe.chunk.css": "/react-admo/static/css/2.1d6907fe.chunk.css",
+    "static/js/2.29362458.chunk.js": "/react-admo/static/js/2.29362458.chunk.js",
+    "static/js/2.29362458.chunk.js.map": "/react-admo/static/js/2.29362458.chunk.js.map",
+    "index.html": "/react-admo/index.html",
+    "precache-manifest.ccdd60e284f3537883472c6b940db6e6.js": "/react-admo/precache-manifest.ccdd60e284f3537883472c6b940db6e6.js",
+    "service-worker.js": "/react-admo/service-worker.js",
+    "static/css/2.1d6907fe.chunk.css.map": "/react-admo/static/css/2.1d6907fe.chunk.css.map",
+    "static/css/main.81fa0e53.chunk.css.map": "/react-admo/static/css/main.81fa0e53.chunk.css.map"
+  }
+}
